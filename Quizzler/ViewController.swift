@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     func updateUI() {
         scoreLabel.text = "Score: \(score)"
         progressLabel.text = "\(questionNumber + 1) / 13"
-        progressBar.frame.size.width = (view.frame.size.width / 13) * CGFloat(questionNumber + 1)
+        progressBar.frame.size.width = (view.frame.size.width / 13) * CGFloat(questionNumber)
     }
     
 
@@ -78,6 +78,7 @@ class ViewController: UIViewController {
     
     func startOver() {
         questionNumber = 0
+        score = 0
         nextQuestion()
     }
     
